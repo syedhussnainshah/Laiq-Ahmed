@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="1st.css">
+    <!-- <style> -->
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Mulish', sans-serif;
+        }
+
+        .head {
+            width: 100%;
+            background-color: white;
+            display: flex;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .hleft {
+            width: 50%;
+            display: flex;
+            justify-content: left;
+        }
+
+        .hleft p {
+            padding: 5px;
+            font-size: 18px;
+        }
+
+        .hright {
+            width: 50px;
+            ;
+            display: flex;
+            justify-content: right;
+        }
+
+        .hright p {
+            padding-right: 7px;
+            padding-top: 5px;
+        }
+
+        .hright ul {
+            display: flex;
+        }
+
+        .hright ul li {
+            list-style: none;
+            padding: 5px;
+            margin-right: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        #account {
+            display: flex;
+        }
+
+        #act {
+            margin-right: 6px;
+        }
+
+        .hright ul li select {
+            border: none;
+            cursor: pointer;
+        }
+
+        .middle {
+            background-color: white;
+            display: flex;
+            width: 100%;
+        }
+
+        .mleft {
+            width: 20%;
+            display: flex;
+            justify-content: left;
+        }
+
+        .mleft img {
+            width: 50%;
+        }
+
+        .mmiddle {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+        }
+
+        .mmiddle select {
+            width: 20%;
+            border: solid;
+            border-width: 1px;
+            border-color: #e93939;
+            padding: 5px;
+            cursor: pointer;
+            border-right: none;
+        }
+
+        .input{
+            width: 50%;
+            height: 5vh;
+            display: flex;
+            flex-direction: row;
+            border-width: 1px;
+            border-left: none;
+            border-color: #e93939;
+        }
+.input p{
+    margin-top: 2px;
+    padding: 1px;
+
+}
+.input input{
+    width: 90%;
+    padding: 5px;
+    border: none;
+}
+.input i{
+    margin-top: 2px;
+}
+#act1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.mright{
+    width: 30px;
+    display: flex;
+    justify-content: right;
+}
+.mright p{
+    padding-right : 7px ;
+    height: 4vh;
+
+}
+.mright ul{
+    display: flex;
+    align-items: center;
+}
+.mright ul li{
+    list-style: none;
+    padding: 5px;
+    margin-right: 15px;
+}
+
+
+
+
+
+
+
+    /* </style> */
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+    <section>
+        <div class="head">
+            <div class="hleft">
+                <p>WELCOME TO NEARSTORE</p>
+            </div>
+            <div class="hright">
+                <ul>
+                    <li>
+                        <select name="" id="">
+                            <option value="">USD</option>
+                            <option value=""></option>
+                        </select>
+                    </li>
+                    <li>
+                        <select name="" id="">
+                            <option value="">ENG</option>
+                            <option value=""></option>
+                        </select>
+                    </li>
+                    <p>|</p>
+                    <li>Blog</li>
+                    <li>Contact Us</li>
+                    <li>My Account</li>
+                    <li id="account">
+                        <i id="act" class="material-icons">account_circle</i>
+                        Sign/Register
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="middle">
+            <div class="mleft">
+                <img src="letter-z-forming-shopping-cart-shape-5293ld.png" alt="">
+            </div>
+            <div class="mmiddle">
+
+                <select name="" id="">
+                    <option>All Categories</option>
+                    <option>Shoes</option>
+                    <option>T-shirts</option>
+                </select>
+
+                <div class="input">
+                    <p>|</p>
+                    <input type="text " placeholder="search">
+
+                    <i class="material-icons">
+                        search
+                    </i>
+                </div>
+
+            </div>
+            <div class="mright">
+                <ul>
+                    <i id="act" class="material-icons">
+                        phone
+                    </i>
+
+                    <li>
+                        Call us at:
+                        <p style="font-size: 15px;">+92239742253</p>
+                    </li>
+                    <p>|</p>
+                    <li id="act1">
+                        <i class="material-icons">
+                            favorite_border
+                        </i>
+                        Wishlist
+                    </li>
+                    <li id="act1">
+                        <i class="material-icons">
+                            compare_arrows
+                        </i>
+                        Compare
+                    </li>
+                    <li id="act1">
+                        <i class="material-icons">
+                            shopping_cart
+                        </i>
+                        Cart
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="end">
+            <div class="eleft">
+
+                <i style="color: white;" class="material-icons">
+                    menu
+                </i>
+
+                <select name="" id="">
+                    <option value="">Browse Categories</option>
+                    <option value="">Fashion</option>
+                    <option value="">Home & Garden</option>
+                </select>
+            </div>
+            <div class="emiddle">
+                <ul>
+                    <li>Home</li>
+                    <li>
+                        <select name="" id="">
+                            <option value="">Shop</option>
+                            <option value=""></option>
+                        </select>
+                    </li>
+                    <li><select name="" id="">
+                            <option value="">Vendor</option>
+                            <option value=""></option>
+                        </select></li>
+                    <li>
+                        <select name="" id="">
+                            <option value="">Blog</option>
+                            <option value=""></option>
+                        </select>
+                    </li>
+                    <li>About Us</li>
+                </ul>
+            </div>
+            <div class="eright">
+                <ul>
+
+                    <i class="material-icons">
+                        location_on
+                    </i>
+
+                    <li>Track Oder</li>
+
+                    <i class="material-icons">
+                        shopping_bag
+                    </i>
+                    <li>Daily Deals</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

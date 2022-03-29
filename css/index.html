@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Admission Form</title>
+    <!-- Bootstrap CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #9abb53 !important;
+}
+
+.darkblue {
+    color: rgba(46, 67, 160, 0.938) !important;
+}
+.darkblue2 {
+    color: rgba(46, 67, 160, 0.938) !important;
+    font-size: 17px;
+}
+
+.row_reverse {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+}
+.wid-100 {
+    width: 100%;
+    color: #333;
+    font-size: 15px;
+}
+.wid-50 {
+    width: 50%;
+    color: #333;
+    font-size: 15px;
+}
+
+.divider {
+    background-color: #9abb53 !important;
+    width: 100%;
+    height: 3px;
+    margin-top: 2px;
+}
+
+.print_hide {
+    display: none;
+}
+
+.form_wrap {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.form-header {
+    background-color: #9abb53;
+    width: 100%;
+    height: 15vh;
+    display: none;
+}
+.form-header img {
+    width: 100%;
+    height: 15vh;
+}
+.form-body {
+    background-color: #9abb53 !important;
+    padding: 35px;
+    width: 100%;
+    height: 90vh;
+}
+
+.form-wrap {
+    background-color: #fff;
+    width: 100%;
+    padding: 8px;
+}
+
+.img-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img {
+    outline: 1px solid rgb(218, 218, 218);
+    outline-offset: -1px;
+    width: 250px;
+    height: 150px;
+}
+
+.multi-col {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    justify-content: space-around;
+}
+.MC-box input {
+    width: 18px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.table-head {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) repeat(2, 17%);
+}
+.TH-box {
+    background-color: #333;
+    border-left: 1px solid #fff;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding: 3px;
+    font-weight: 300;
+}
+
+.STRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) repeat(2, 17%);
+}
+.STRow_box input {
+    text-align: center;
+}
+
+#decl p {
+    font-size: 7px;
+}
+#signature_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signature {
+    outline: 2px solid rgb(168, 247, 214);
+    outline-offset: -2px rgb(168, 247, 214);
+    text-align: center;
+    padding: 5px;
+}
+.signature input {
+    width: 65%;
+    border: none;
+    border-bottom: 1px solid rgb(131, 131, 131);
+    display: block;
+}
+.signature small {
+    font-size: 10px;
+}
+
+@media print 
+{
+    .print_hide {
+        display: block;
+    }
+    .form-header {
+        display: block;
+    }
+    .darkblue {
+        font-size: 12px;
+    }
+    .darkblue2 {
+        font-size: 14px;
+    }
+
+    input {
+        border: none !important;
+    }
+    
+    .pri_small {
+        font-size: 12px !important;
+    }
+
+    #decl p {
+        font-size: 9px;
+    }
+
+    .signature small {
+        font-size: 7px;
+    }
+
+    strong, small, .TH-box, .divider, #decl {
+        display: none;
+    }
+
+}
+    </style>
+</head>
+<body>
+    
+    <div class="form_wrap">
+        <div class="form-header">
+            <img src="banner.jpg" alt="Loading">
+        </div>
+        <div class="form-body">
+            <div class="form-wrap">
+                
+                <div class="container-fluid mb-3">
+                    <div class="row">
+                        <div class="col-3">
+                            <strong class="darkblue">COURSE APPLIED FOR</strong>
+                        </div>
+                        <div class="col-9 row_reverse">
+                            <input type="text" class="wid-100">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid mb-3">
+                    <div class="row">
+                        <div class="col-4">
+                            <strong class="darkblue2">PERSONAL INFORMATION</strong>
+                        </div>
+                        <div class="col-8 pt-2">
+                            <div class="divider"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid mb-3">
+                    <div class="row">
+                    
+                        <div class="col-9">
+                            
+                            <div class="row">
+                                <div class="col-4">
+                                    <small class="pri_small">1. Name of Student</small>
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" class="wid-100">
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-4">
+                                    <small class="pri_small">2. Guardian's Name</small>
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" class="wid-100">
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-4">
+                                    <small class="pri_small">3. N.I.C</small>
+                                </div>
+                                <div class="col-4 multi-col">
+
+                                    <div class="MC-box">
+                                        <input type="text">
+                                    </div>
+                                    <div class="MC-box">
+                                        <input type="text">
+                                    </div>
+                                    <div class="MC-box">
+                                        <input type="text" value="-">
+                                    </div>
+                                    <div class="MC-box">
+                                        <input type="text">
+                                    </div>
+                                    <div class="MC-box">
+                                        <input type="text">
+                                    </div>
+                                    <div class="MC-box">
+                                        <input type="text" value="-">
+                                    </div>
+                                    <div class="MC-box">
+                                        <input type="text">
+                                    </div>
+                                    <div class="MC-box">
+                                        <input type="text">
+                                    </div>
+                                    <div class="MC-box">
+                                        <input type="text">
+                                    </div>
+                                    <div class="MC-box">
+                                        <input type="text">
+                                    </div>
+
+                                </div>
+                                <div class="col-2">
+                                    <small class="pri_small">Gender</small>
+                                </div>
+                                <div class="col-2">
+                                    <input type="text" class="wid-100">
+                                </div>
+                            </div>
+
+
+                            <div class="row mt-1">
+                                <div class="col-4">
+                                    <small class="pri_small">4. Date of Birth</small>
+                                </div>
+                                <div class="col-4">
+                                    <input type="text" class="wid-100">
+                                </div>
+                                <div class="col-2">
+                                    <small class="pri_small">Nationality</small>
+                                </div>
+                                <div class="col-2">
+                                    <input type="text" class="wid-100">
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-4">
+                                    <small class="pri_small">5. Personal Mobile</small>
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" class="wid-100">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-3 img-wrap">
+                            <div class="img">
+                                <img src="..." alt="...">
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+
+                <div class="container-fluid mb-3">
+                    <div class="row">
+                        <div class="col-3">
+                            <small class="pri_small">6. Guardian Contact</small>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" class="wid-100">
+                        </div>
+                    </div>
+
+                    <div class="row mt-1">
+                        <div class="col-3">
+                            <small class="pri_small">7. E-mail</small>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" class="wid-100">
+                        </div>
+                    </div>
+
+                    <div class="row mt-1">
+                        <div class="col-3">
+                            <small class="pri_small">8. Postal Address</small>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" class="wid-100">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="container-fluid mb-3">
+                    <div class="row">
+                        <div class="col-4">
+                            <strong class="darkblue2">ACADEMIC RECORD</strong>
+                        </div>
+                        <div class="col-8 pt-2">
+                            <div class="divider"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid mb-3">
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-11 table-head">
+                            <div class="TH-box">Certificate / Degree</div>
+                            <div class="TH-box">College/University/Institute</div>
+                            <div class="TH-box">Year</div>
+                            <div class="TH-box">Marks/%</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-1"><small class="pri_small">1.</small></div>
+                        <div class="col-11 STRow">
+                            <div class="STRow_box"><input type="text" class="wid-100"></div>
+                            <div class="STRow_box"><input type="text" class="wid-100"></div>
+                            <div class="STRow_box"><input type="text" class="wid-100"></div>
+                            <div class="STRow_box"><input type="text" class="wid-100"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-1"><small class="pri_small">2.</small></div>
+                        <div class="col-11 STRow">
+                            <div class="STRow_box"><input type="text" class="wid-100"></div>
+                            <div class="STRow_box"><input type="text" class="wid-100"></div>
+                            <div class="STRow_box"><input type="text" class="wid-100"></div>
+                            <div class="STRow_box"><input type="text" class="wid-100"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="container-fluid mb-1 ">
+                    <div class="row">
+                        <div class="col-4">
+                            <strong class="darkblue2">DECLARTION</strong>
+                        </div>
+                        <div class="col-8 pt-2">
+                            <div class="divider"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid border mb-3 " id="decl">
+                    <div class="row">
+                        <div class="col-10">
+                            <p><small>1. I hereby confirm that the information provided by me is true to best of my knowledge.</small><br><small>2. I shall abide by the Rules and Regulations of the Institute.</small><br><small>3. Fee once paid is not refundable.</small><br><small>4. In case of any dispute arise between Institute and student in any respect, the decision of College Management shall stand final and student shall not be liable to apply before any court.</small></p>
+                        </div>
+                        <div class="col-2" id="signature_wrap">
+                            <div class="signature">
+                                <input type="text">
+                                <small>Applicant Signature</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="container-fluid mb-1">
+                    <div class="row">
+                        <div class="col-4">
+                            <strong class="darkblue2">FOR OFFICE USE ONLY</strong>
+                        </div>
+                        <div class="col-8 pt-2">
+                            <div class="divider"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-2">
+                            <small class="pri_small">1. Reg No.</small>
+                        </div>
+                        <div class="col-5 multi-col">
+
+                            <div class="MC-box">
+                                <input type="text">
+                            </div>
+                            <div class="MC-box">
+                                <input type="text">
+                            </div>
+                            <div class="MC-box">
+                                <input type="text" value="-">
+                            </div>
+                            <div class="MC-box">
+                                <input type="text">
+                            </div>
+                            <div class="MC-box">
+                                <input type="text">
+                            </div>
+                            <div class="MC-box">
+                                <input type="text" value="-">
+                            </div>
+                            <div class="MC-box">
+                                <input type="text">
+                            </div>
+                            <div class="MC-box">
+                                <input type="text">
+                            </div>
+                            <div class="MC-box">
+                                <input type="text">
+                            </div>
+                            <div class="MC-box">
+                                <input type="text">
+                            </div>
+
+                        </div>
+                        <div class="col-2">
+                            <small class="pri_small">Fee Package</small>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" class="wid-100">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-2">
+                            <small class="pri_small">2. Roll No.</small>
+                        </div>
+                        <div class="col-5 multi-col">
+
+                            <div class="MC-box">
+                                <input type="text">
+                            </div>
+                            <div class="MC-box">
+                                <input type="text">
+                            </div>
+                            <div class="MC-box">
+                                <input type="text" value="-">
+                            </div>
+                            <div class="MC-box">
+                                <input type="text">
+                            </div>
+                            <div class="MC-box">
+                                <input type="text">
+                            </div>
+                            <div class="MC-box">
+                                <input type="text" value="-">
+                            </div>
+                            <div class="MC-box">
+                                <input type="text">
+                            </div>
+                            <div class="MC-box">
+                                <input type="text">
+                            </div>
+                            <div class="MC-box">
+                                <input type="text">
+                            </div>
+                            <div class="MC-box">
+                                <input type="text">
+                            </div>
+
+                        </div>
+                        <div class="col-2">
+                            <input type="radio" name="Full_fee" name="Full_fee">&nbsp;Full Fee
+                        </div>
+                        <div class="col-3">
+                            <input type="radio" name="Installments" name="Installments">&nbsp;Installments
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-9">
+                            <div class="row mt-2">
+                                <div class="col-4">
+                                    <small class="pri_small">3. Date of Admission.</small>
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" class="wid-100">
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-3">
+                                    <small class="pri_small">Admission Coordinator</small>
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="wid-100">
+                                </div>
+                                <div class="col-3">
+                                    <small class="pri_small">Program Coordinator</small>
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="wid-100">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-3">
+                            
+                            <div class="row">
+                                <div class="col-12 row_reverse">
+                                    <input type="text">
+                                    <small class="pri_small me-2">1st</small>
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-12 row_reverse">
+                                    <input type="text">
+                                    <small class="pri_small me-2">2nd</small>
+                                </div>
+                            </div>
+                            <div class="row mt-1">
+                                <div class="col-12 row_reverse">
+                                    <input type="text">
+                                    <small class="pri_small me-2">3rd</small>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Js File Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
